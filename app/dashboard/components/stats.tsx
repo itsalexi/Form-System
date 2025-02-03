@@ -1,21 +1,23 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import type { FormSubmission } from "@/types/form"
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { FormSubmission } from '@/types/form';
 
 interface StatsProps {
-  submissions: FormSubmission[]
+  submissions: FormSubmission[];
 }
 
 export function Stats({ submissions }: StatsProps) {
-  const totalSubmissions = submissions.length
-  const approved = submissions.filter((s) => s.status === "approved").length
-  const rejected = submissions.filter((s) => s.status === "rejected").length
-  const pending = submissions.filter((s) => s.status === "pending").length
+  const totalSubmissions = submissions.length;
+  const approved = submissions.filter((s) => s.status === 'approved').length;
+  const rejected = submissions.filter((s) => s.status === 'rejected').length;
+  const pending = submissions.filter((s) => s.status === 'pending').length;
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Total Submissions</CardTitle>
+          <CardTitle className="text-sm font-medium">
+            Total Submissions
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">{totalSubmissions}</div>
@@ -55,6 +57,5 @@ export function Stats({ submissions }: StatsProps) {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
-
