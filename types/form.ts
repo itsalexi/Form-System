@@ -1,4 +1,4 @@
-type FormSubmission = {
+export interface FormSubmission {
   id: string;
   created_at: string;
   status: 'pending' | 'approved' | 'rejected';
