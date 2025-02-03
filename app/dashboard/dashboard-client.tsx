@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { updateSubmissionStatus } from '@/lib/actions';
 import type { FormSubmission } from '@/types/form';
 import { Button } from '@/components/ui/button';
@@ -77,7 +76,7 @@ export function DashboardClient({ initialSubmissions }: DashboardClientProps) {
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'Failed to update application status. Please try again.',
+        description: `Failed to update application status. Please try again. ${error}`,
         variant: 'destructive',
       });
     }

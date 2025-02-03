@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useState, useCallback, useMemo } from 'react';
@@ -22,6 +23,12 @@ interface ResponseViewerProps {
     id: string,
     status: 'approved' | 'rejected'
   ) => Promise<void>;
+}
+
+interface ResponseAnalysis {
+  type: 'list' | 'chart';
+  data: any;
+  total: number;
 }
 
 export function ResponseViewer({
@@ -93,7 +100,7 @@ export function ResponseViewer({
       } catch (error) {
         toast({
           title: 'Error',
-          description: 'Failed to update application status. Please try again.',
+          description: `Failed to update application status. Please try again. ${error}`,
           variant: 'destructive',
         });
       }

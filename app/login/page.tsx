@@ -23,6 +23,7 @@ export default function Login() {
       if (error) throw error
       router.push('/dashboard')
       router.refresh()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.message)
     }
