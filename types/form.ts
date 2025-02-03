@@ -13,4 +13,9 @@ export interface FormSubmission {
   about: string;
   links: string;
   goals: string;
+}
+
+export type FormState = {
+  message?: string;
+  error?: string;
 };

@@ -47,7 +47,6 @@ export function ResponseViewer({
 
   const currentSubmission = pendingSubmissions[currentIndex];
 
-  // Exclude these fields from visualization
   const excludedFields = ['id', 'created_at', 'status'];
 
   function analyzeResponses(responses: any[], field: string): ResponseAnalysis {
