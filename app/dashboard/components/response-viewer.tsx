@@ -116,7 +116,7 @@ export function ResponseViewer({
   }
 
   return (
-    <div className="container mx-auto space-y-6">
+    <div className="container px-4 sm:px-0 space-y-6">
       <Card className="border-0 shadow-none">
         <CardHeader className="border-b px-0 pb-4">
           <div className="flex items-center justify-between">
@@ -173,7 +173,7 @@ export function ResponseViewer({
             )}
           </div>
         </CardHeader>
-        <CardContent className="px-0">
+        <CardContent className="px-0 bg">
           <Tabs defaultValue="summary" onValueChange={setActiveTab}>
             <TabsList className="mb-4 w-full justify-start">
               <TabsTrigger value="summary">Summary</TabsTrigger>
