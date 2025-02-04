@@ -103,16 +103,16 @@ export function DashboardClient({ initialSubmissions }: DashboardClientProps) {
 
   return (
     <div className="container mx-auto py-10 space-y-8">
-      <div className="flex justify-between items-center">
+     <div className="flex justify-between items-center mx-4 my-4 sm:mx-0 sm:my-0">
         <h1 className="text-3xl font-bold">Dashboard</h1>
         <Button onClick={() => setView(!view)}>
-          {view ? 'View Pending & Summary': 'View Stats'}
+          {view ? 'View Pending & Summary' : 'View Stats'}
         </Button>
       </div>
       {view ? (
         <>
           <Stats submissions={submissions} />
-          <Card>
+          <Card className="mx-4 sm:mx-0 px-4 sm:px-0">
             <CardHeader>
               <CardTitle>Application Submissions</CardTitle>
               <CardDescription>

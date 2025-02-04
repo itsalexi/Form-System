@@ -12,7 +12,8 @@ export function Stats({ submissions }: StatsProps) {
   const pending = submissions.filter((s) => s.status === 'pending').length;
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+  <div className="mx-auto px-4 sm:px-0">
+    <div className="grid gap-4 grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">
@@ -57,5 +58,6 @@ export function Stats({ submissions }: StatsProps) {
         </CardContent>
       </Card>
     </div>
+  </div>
   );
 }
